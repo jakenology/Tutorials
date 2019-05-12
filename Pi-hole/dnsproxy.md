@@ -86,7 +86,7 @@ DNSPROXY_OPTS="--https-port=443 --tls-port=853 --tls-crt=$CERT --tls-key=$PKEY -
 
 Give the script proper execute permissions
 ```
-chmod a+x /opt/dnsproxy/start.sh
+chmod a+x start.sh; cd -
 ```
 
 ## Creating the service 
@@ -117,9 +117,15 @@ WantedBy=multi-user.target
     sudo service dnsproxy start
     ```
 3. Test it out
-    - dnstls (npm)
+    - dnstls (Node.js REQUIRED)
+    ```
+    npm i -g dnstls
+    dnstls @<SERVER IP> +tls-host=<DOMAIN NAME> doubleclick.net
+    ```
+        - Should return 0.0.0.0
     - Firefox
-
+    - Android 9+ Private DNS 
+    
 # Credits
 ## Matt Zabojnik
 - He had no idea how to use his Pi-hole with Android Pie, neither did I
@@ -128,3 +134,5 @@ WantedBy=multi-user.target
 ## Me (Jayke Peters)
 - 16 year old
 - Been doing stuff like this for 2 years.
+- Follow me on twitter, insta, and snap @jayke_peters
+- jayke.net
