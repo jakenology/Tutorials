@@ -122,7 +122,7 @@ WantedBy=multi-user.target
     npm i -g dnstls
     dnstls @<SERVER IP> +tls-host=<DOMAIN NAME> doubleclick.net
     ```
-        - Should return 0.0.0.0
+        Should return 0.0.0.0
     - Firefox
     - Android 9+ Private DNS 
     
@@ -134,7 +134,7 @@ WantedBy=multi-user.target
 ## Me (Jayke Peters)
 - 16 year old
 - Been doing stuff like this for 2 years.
-- Follow me on twitter, insta, and snap @jayke_peters and visit my website at http://jayke.net
+- Follow me on Twitter, Insta, and Snap @jayke_peters and visit my boring blog/website at https://jayke.net
 
 # Sources
 - https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-14.html#rfc.section.4.1.1
