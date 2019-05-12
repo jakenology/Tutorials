@@ -134,5 +134,10 @@ WantedBy=multi-user.target
 ## Me (Jayke Peters)
 - 16 year old
 - Been doing stuff like this for 2 years.
-- Follow me on twitter, insta, and snap @jayke_peters
-- jayke.net
+- Follow me on twitter, insta, and snap @jayke_peters and visit my website at http://jayke.net
+
+# Sources
+- https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-14.html#rfc.section.4.1.1
+- https://developers.cloudflare.com/1.1.1.1/dns-over-https/wireformat/
+- https://docs.pi-hole.net/guides/dns-over-https/
+- https://www.freedesktop.org/software/systemd/man/systemd.service.html
