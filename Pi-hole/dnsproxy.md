@@ -121,11 +121,10 @@ WantedBy=multi-user.target
     - Firefox
 
 # Credits
-Matt Zabojnik
-- Had no idea how to use his Pi-hole with Android Pie, neither did I
+## Matt Zabojnik
+- He had no idea how to use his Pi-hole with Android Pie, neither did I
 - Gave me the initiative to try this out and create this tutorial. This would not have happened without him!
 
-Me (Jayke Peters)
+## Me (Jayke Peters)
 - 16 year old
-- Been doing stuff like this for 2 years
-- Learned python... Some C, some golang, some java lol
+- Been doing stuff like this for 2 years.
