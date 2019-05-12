@@ -1,9 +1,8 @@
 # Pi-hole with DNS-Over-TLS/HTTPS
 
 # Prerequesites
-## Google Cloud Platform
-Ensure you have the following firewall rules
-### Protocols and ports
+## Firewall (GCP, AWS, Azure)
+### Protocols and ports required
 - tcp:53
 - tcp:80
 - tcp:443
