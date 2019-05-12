@@ -1,6 +1,9 @@
 # Pi-hole with DNS-Over-TLS/HTTPS
 
 Starting from scratch, or wherever you may be at, the following steps must be completed
+# Google Cloud Platform
+Ensure you have the following firewall rules
+![Firewall Rules](img/dp_fw.png)
 
 1. Install Pi-hole Normally
 2. Install the dependencies
