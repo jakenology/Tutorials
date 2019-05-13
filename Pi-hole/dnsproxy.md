@@ -54,13 +54,21 @@ curl -sSL https://install.pi-hole.net | bash
 # Generating an SSL Certificate
 - For dnsproxy to work, you will need a vaild SSL certificate. To generate a FREE SSL Certificate, use the following command
     ```
-    certbot certonly --pre-hook "service lighttpd stop" --post-hook "service lighttpd start" --standalone -d <HOSTNAME>
+    certbot certonly --pre-hook "service lighttpd stop" --post-hook "service lighttpd start" --standalone -d <SERVER HOSTNAME>
+    
+    cd /etc/letsencrypt/live/<SERVER HOSTNAME>
+    
+    cat privkey.pem fullchain.pem > mixed.pem
+
+    cd -
     ```
 ## Configuring Auto Renew
 Follow this tutorial https://www.onepagezen.com/letsencrypt-auto-renew-certbot-apache/
 I'm not going to go into the details, EXCEPT in your crontab, include the following: 
 ```
 45 2 * * 6 cd /etc/letsencrypt/ && ./certbot-auto renew && /usr/sbin/service dnsproxy restart
+0 0 * * 0 cd /etc/letsencrypt/live/<SERVER HOSTNAME>; cat privkey.pem fullchain.pem > mixed.pem
+
 ```
 
 # Creating the start script and service
@@ -72,10 +80,10 @@ mkdir /opt/dnsproxy; cd /opt/dnsproxy
 Using a text editor of your choice, add the following to `start.sh`:
 ```
 #!/bin/bash
-HOSTNAME="<YOUR HOSTNAME>"
+HOSTNAME="<SERVER HOSTNAME>"
 
 CERTSPATH=/etc/letsencrypt/live/$HOSTNAME
-CERT=$CERTSPATH/cert.pem
+CERT=$CERTSPATH/mixed.pem
 PKEY=$CERTSPATH/privkey.pem
 
 DNSPROXY_OPTS="--https-port=443 --tls-port=853 --tls-crt=$CERT --tls-key=$PKEY -u 127.0.0.1:53 -p 0"
@@ -121,7 +129,7 @@ WantedBy=multi-user.target
         - https://sagi.io/2018/09/dns-over-tls---thoughts-and-implementation/
     ```
     npm i -g dnstls
-    dnstls @<SERVER IP> +tls-host=<SERVER HOSTNAME> doubleclick.net
+    dnstls @<SERVER HOSTNAME> +tls-host=<SERVER HOSTNAME> doubleclick.net
     ```
         Should return 0.0.0.0
     - Firefox
