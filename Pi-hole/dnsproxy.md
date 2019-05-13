@@ -68,7 +68,6 @@ I'm not going to go into the details, EXCEPT in your crontab, include the follow
 ```
 45 2 * * 6 cd /etc/letsencrypt/ && ./certbot-auto renew && /usr/sbin/service dnsproxy restart
 0 0 * * 0 cd /etc/letsencrypt/live/<SERVER HOSTNAME>; cat privkey.pem fullchain.pem > mixed.pem
-
 ```
 
 # Creating the start script and service
