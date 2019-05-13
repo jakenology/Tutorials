@@ -118,9 +118,10 @@ WantedBy=multi-user.target
     ```
 3. Test it out
     - dnstls (Node.js REQUIRED)
+        - https://sagi.io/2018/09/dns-over-tls---thoughts-and-implementation/
     ```
     npm i -g dnstls
-    dnstls @<SERVER IP> +tls-host=<DOMAIN NAME> doubleclick.net
+    dnstls @<SERVER IP> +tls-host=<SERVER HOSTNAME> doubleclick.net
     ```
         Should return 0.0.0.0
     - Firefox
@@ -141,3 +142,4 @@ WantedBy=multi-user.target
 - https://developers.cloudflare.com/1.1.1.1/dns-over-https/wireformat/
 - https://docs.pi-hole.net/guides/dns-over-https/
 - https://www.freedesktop.org/software/systemd/man/systemd.service.html
+- https://sagi.io/2018/09/dns-over-tls---thoughts-and-implementation/
