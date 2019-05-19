@@ -1,4 +1,5 @@
 # Pi-hole with DNS-Over-TLS/HTTPS
+[![](http://img.youtube.com/vi/tnytpjmSwXA/0.jpg)](http://www.youtube.com/watch?v=tnytpjmSwXA "YouTube Video")
 
 # Prerequesites
 ## Firewall (GCP, AWS, Azure)
