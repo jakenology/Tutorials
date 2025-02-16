@@ -133,11 +133,6 @@ WantedBy=multi-user.target
 - He had no idea how to use his Pi-hole with Android Pie, neither did I
 - Gave me the initiative to try this out and create this tutorial. This would not have happened without him!
 
-## Me (Jayke Peters)
-- 16 year old
-- Been doing stuff like this for 2 years.
-- Follow me on Twitter, Insta, and Snap @jayke_peters and visit my boring blog/website at https://jayke.net
-
 # Sources
 - https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-14.html#rfc.section.4.1.1
 - https://developers.cloudflare.com/1.1.1.1/dns-over-https/wireformat/
